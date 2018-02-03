@@ -11,7 +11,7 @@ h1 {
   font-size: 70px;
   text-align: center;
   width: 500px;
-  margin: 0 auto;
+  margin: 200px auto 0 auto;
   }
 
 .web-title,
@@ -21,6 +21,7 @@ h1 {
   font-size: 28px;
   display: flex;
   margin: 50px auto;
+  padding-left: 10px
 
 }
 
@@ -75,10 +76,29 @@ h1 {
 }
 .enter-button {
   display: flex;
-  width: 450px;
+  width: 465px;
   margin: 0 auto;
   background-color: #ffc107;
+  height: 40px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+  padding-left: 192px;
 }
+
+.enter-button:hover {
+  background-color: #ffd773;
+  transition: .5s
+}
+
+.bookmark-count,
+.read-count {
+  text-align: center;
+  color: #ffffff;
+  font-size: 21px
+}
+
 
 hr {
   width: 564px;
