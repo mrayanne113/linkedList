@@ -9,16 +9,18 @@
 <body>
   <section class="main-left">
     <h1>Linked<img class="logo" src="images/linked-list-logo.svg" alt="Two chains over lapping.">List</h1>
-    <label for="website-title"></label>
-    <input type="text" name="website-title">
-    <label for="website-url"></label>
-    <input type="url" name="website-url">
-    <label for="enter-bttn"></label>
-    <input type="button" name="enter-bttn">
+    <form role="form">
+      <label for="website-title"></label>
+      <input type="text" name="website-title" placeholder="Website Title">
+      <label for="website-url"></label>
+      <input type="url" name="website-url" placeholder="Website Url">
+      <label for="enter-bttn"></label>
+      <input type="button" name="enter-bttn">
+    </form>
     <p>Bookmark Count:<span class="bookmark-count"></span></p>
     <p>Read Count:<span class="read-count"></span></p>
   </section>
-  <section class="main-right">
+  <section class="main-right" role="main">
     <article class="card">
       <h2 class="card-title">Website Title</h2>
       <hr class="card-hr">

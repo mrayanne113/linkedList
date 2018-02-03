@@ -1,1 +1,0 @@
-$('h1').text('I AM A DINOSAUR.');
