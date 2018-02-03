@@ -107,6 +107,16 @@ button {
   font-size: 21px
 }
 
+a:link, 
+a:visited {
+  color: #455A64;
+  text-decoration-color: #f2F4F4;
+}
+
+a:hover {
+  text-decoration-color: #FFC107;
+}
+
 hr {
   width: 564px;
   background-color: #cfd8dc;
@@ -121,6 +131,7 @@ hr {
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-color: #F2F4F4;
+  background-color: transparent;
 }
 
 .delete-bttn {
@@ -137,4 +148,18 @@ hr {
 .delete-bttn:hover {
   text-decoration: underline;
   text-decoration-color: #FFC107;
+}
+
+.read {
+  background-color: #F2F4F4;
+}
+
+.read-underline {
+  text-decoration: underline;
+  text-decoration-color: #CFD8DC;
+}
+
+.read-bttn-style {
+  color: #F05A28;
+  font-weight: 800;
 }
