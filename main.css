@@ -56,17 +56,22 @@ h1 {
   align-items: center;
   margin: 23px auto;
   background-color: #ffffff;
+  padding: 0 30px;
 }
 
 .card-title {
   font-size: 30px;
   padding-left: 10px;
   color: #455a64;
+  margin-bottom: 0;
 }
 .card-website {
   padding-left: 10px;
   font-size: 20px;
   color: #607d8b;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #F2F4F4;
 }
 .enter-button {
   display: flex;
@@ -78,4 +83,27 @@ h1 {
 hr {
   width: 564px;
   background-color: #cfd8dc;
+}
+.read-bttn, 
+.delete-bttn {
+  color: #607D8B;
+  border: none;
+  font-size: 16px;
+  padding-top: 10px;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #F2F4F4;
+}
+.delete-bttn {
+  float: right;
+}
+.read-bttn:hover,
+.card-website:hover {
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
+  font-weight: 800;
+}
+.delete-bttn:hover {
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
 }
