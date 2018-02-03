@@ -11,9 +11,9 @@
     <h1>Linked<img class="logo" src="images/linked-list-logo.svg" alt="Two chains over lapping.">List</h1>
     <form role="form">
       <label for="website-title"></label>
-      <input class="website-title" type="text" name="website-title" placeholder="Website Title">
+      <input class="website-title" type="text" name="website-title" aria-required="true" placeholder="Website Title">
       <label for="website-url"></label>
-      <input class="website-url" type="url" name="website-url" placeholder="Website Url">
+      <input class="website-url" type="url" name="website-url" aria-required="true" placeholder="Website Url">
       <label for="enter-bttn"></label>
       <input class="enter-bttn" type="button" name="enter-bttn">
     </form>
@@ -26,8 +26,8 @@
       <hr class="card-hr">
       <p class="card-website">www.coolweebsite.com</p>
       <hr>
-      <button class="read-bttn">Read</button>
-      <button class="delete-bttn">Delete</button>
+      <button aria-label="Read this bookmark" class="read-bttn">Read</button>
+      <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
     </article>
   </section>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
