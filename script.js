@@ -11,6 +11,8 @@ $enterButton.on('click', validateTheLink);
 $('web-title').on('keyup', enableBttn);
 $('.main-right').on('click', '.read-bttn', addReadClass);
 $('.main-right').on('click', '.delete-bttn', removeCard);
+$('.main-right').on('click', 'a', consoleThis)
+
 
 // one for enter bttn, one for read bttn, one delete, and one for read all
 
@@ -24,7 +26,7 @@ function makeCard() {
   $(`<article class="card">
       <h2 class="card-title">${webTitle}</h2>
       <hr class="card-hr">
-      <p class="card-website"><a target="_blank" href="www.${webURL}">${webURL}</a></p>
+      <p class="card-website"><a class="website-link" target="_blank" href="www.${webURL}">${webURL}</a></p>
       <hr>
       <button aria-label="Read this bookmark" class="read-bttn">Read</button>
       <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
@@ -54,8 +56,11 @@ function clearInputs() {
 // toggle read class
 function addReadClass() {
   $(this).parent('article').toggleClass('read');
-  $(this).closest('p').toggle('read-underline');
   $(this).toggleClass('read-bttn-style');
+   var $anchorTag = $(this).siblings('.card-website')[0].firstChild;
+   console.log(anchorTag)
+   // $anchorTag.toggleClass('read-underline')
+  // $('.card').closest('p').toggleClass('read-underline');
 }
 
 // remove bttn, remove closest parent article 
@@ -87,3 +92,7 @@ function validateTheLink(e) {
 }
 
 
+function consoleThis(e){
+  e.preventDefault()
+  console.log()
+}
