@@ -168,6 +168,14 @@ hr {
   font-weight: 800;
 }
 
+
 .enter-button:disabled {
   background-color: #FCED42;
 }
+
+.warning {
+  text-align: center;
+  margin: -30px auto;
+  color: #f05a28
+}
+

@@ -1,8 +1,11 @@
 // variables
-var $enterButton = $('.enter-button');
-
+var enterButton = $('.enter-button');
+var webTitleInput = $('.web-title')
+var webUrlInput = $('.web-url')
+// var readBttn = $('.read-bttn');
 var readCount = 0;
 // page load
+disableEnter()
 
 
 
@@ -19,14 +22,16 @@ $('.main-right').on('click', 'a', consoleThis)
 
 
 // function for makeCard, with template lit and append
-function makeCard() {
-  // e.preventDefault();
-  var webTitle = $('.web-title').val()
-  var webURL = $('.web-url').val()
+function makeCard(e) {
+  e.preventDefault();
+  var webTitle = $('.web-title').val();
+  var webURL = $('.web-url').val();
   $(`<article class="card">
       <h2 class="card-title">${webTitle}</h2>
       <hr class="card-hr">
+
       <p class="card-website"><a class="website-link" target="_blank" href="www.${webURL}">${webURL}</a></p>
+
       <hr>
       <button aria-label="Read this bookmark" class="read-bttn">Read</button>
       <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
@@ -63,13 +68,27 @@ function addReadClass() {
   // $('.card').closest('p').toggleClass('read-underline');
 }
 
-// remove bttn, remove closest parent article 
+// // remove bttn, remove closest parent article 
 function removeCard() {
   $(this).parent().remove();
 }
 
-// count for boomarks
+// disable enter button
+function disableEnter() {
+  if (webTitleInput.val().length > 0 && webUrlInput.val().length > 0) {
+    enterButton.removeAttr('disabled')
+  } else {
+    enterButton.attr('disabled', 'disabled');
+    $(`<p class="warning"> *Enter a title and URL to submit a bookmark </p>`).prependTo('.web-title');
+  }
+}
+webTitleInput.on('keyup', disableEnter);
 
+webUrlInput.on('keyup', disableEnter);
+
+
+// count for boomarks 
+ 
 // count for read
 
 // count for unread
