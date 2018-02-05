@@ -1,5 +1,7 @@
 // variables
 var enterButton = $('.enter-button');
+var webTitleInput = $('.web-title')
+var webUrlInput = $('.web-url')
 // var readBttn = $('.read-bttn');
 var readCount = 0;
 // page load
@@ -19,7 +21,7 @@ function makeCard(e) {
   $(`<article class="card">
       <h2 class="card-title">${webTitle}</h2>
       <hr class="card-hr">
-      <p class="card-website"><a target="_blank" href="www.${webURL}">${webURL}</a></p>
+      <p class="card-website"><a target="_blank" href="${webURL}">${webURL}</a></p>
       <hr>
       <button aria-label="Read this bookmark" class="read-bttn">Read</button>
       <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
@@ -27,7 +29,8 @@ function makeCard(e) {
   $('.web-title').val('');
   $('.web-url').val('');
   $('.web-title').focus();
-}
+  enterButton.attr('disabled','')
+  }
 // disable enter bttn, inculed value so if the value is nothing in one field they both are still disabled
 
 // enable enter bttn
@@ -40,13 +43,26 @@ function addReadClass() {
   
 }
 
-// remove bttn, remove closest parent article 
+// // remove bttn, remove closest parent article 
 function removeCard() {
-  $('.delete-bttn').closest('.card').remove();
+  $(this).parent().remove();
 }
 
-// count for boomarks
+// disable enter button
+function disableEnter() {
+  if (webTitleInput.val().length > 0 && webUrlInput.val().length > 0) {
+    enterButton.removeAttr('disabled')
+  } else {
+    enterButton.attr('disabled', '')
+  }
+}
+webTitleInput.on('keyup', disableEnter);
 
+webUrlInput.on('keyup', disableEnter);
+
+
+// count for boomarks
+ 
 // count for read
 
 // count for unread
