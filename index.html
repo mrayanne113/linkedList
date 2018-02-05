@@ -3,37 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <title> Linked List </title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <section class="main-left">
-    <h1>Linked<img class="logo" src="images/linked-list-logo.svg" alt="Two chains over lapping.">List</h1>
-    <form role="form">
-      <label for="website-title"></label>
-      <input type="text" name="website-title" placeholder="Website Title" aria-required="true" class="web-title">
-      <label for="website-url"></label>
-      <input type="url" name="website-url" aria-required="true" placeholder="Website Url" class="web-url">
-      <label for="enter-bttn"></label>
-      <button aria-label="Enter web url and title" class="enter-button"> Enter </button>
-    </form>
-    <p class="bookmark-count">Bookmark Count:<span class="bookmark-count-display"></span></p>
-    <p class="read-count">Read Count:<span class="read-count-display"></span></p>
-  </section>
-  <section class="main-right" role="main">
-    <article class="card">
-      <h2 class="card-title">Website Title</h2>
-      <hr class="card-hr">
-      <p class=" card-website">www.coolweebsite.com</p>
-      <hr>
-      <button aria-label="Read this bookmark" class="read-bttn ">Read</button>
-      <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
-    </article>
+  <section class="all">
+    <section class="main-left">
+      <h1>Linked<img class="logo" src="images/linked-list-logo.svg" alt="Two chains over lapping.">List</h1>
+      <form role="form">
+        <p class="required-input"></p>
+        <label for="website-title"></label>
+        <input type="text" name="website-title" placeholder="Website Title" aria-required="true" class="web-title" required>
+        <label for="website-url"></label>
+        <input type="url" name="website-url" aria-required="true" placeholder="Website Url" class="web-url" required>
+        <label for="enter-bttn"></label>
+        <button aria-label="Enter web url and title" class="enter-button"> Enter </button>
+      </form>
+     <p class="bookmark-count">Bookmark Count:<span class="bookmark-count-display"></span></p>
+     <p class="read-count">Read Count:<span class="read-count-display"></span></p>
+    </section>
+    <section class="main-right" role="main">
+      <!-- <article class="card">
+        <h2 class="card-title">Website Title</h2>
+        <hr class="card-hr">
+        <p class=" card-website">www.coolweebsite.com</p>
+        <hr>
+        <button aria-label="Read this bookmark" class="read-bttn ">Read</button>
+        <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
+      </article> -->
+    </section>
   </section>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
   <script type="text/javascript" src="script.js"></script>
-  
 </body>
 </html>
