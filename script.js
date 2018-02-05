@@ -5,6 +5,7 @@ var webUrlInput = $('.web-url')
 // var readBttn = $('.read-bttn');
 var readCount = 0;
 // page load
+disableEnter()
 
 // event listeners
 enterButton.on('click', makeCard);
@@ -16,8 +17,8 @@ $('.main-right').on('click', '.delete-bttn', removeCard);
 // function for makeCard, with template lit and append
 function makeCard(e) {
   e.preventDefault();
-  var webTitle = $('.web-title').val()
-  var webURL = $('.web-url').val()
+  var webTitle = $('.web-title').val();
+  var webURL = $('.web-url').val();
   $(`<article class="card">
       <h2 class="card-title">${webTitle}</h2>
       <hr class="card-hr">
@@ -53,7 +54,8 @@ function disableEnter() {
   if (webTitleInput.val().length > 0 && webUrlInput.val().length > 0) {
     enterButton.removeAttr('disabled')
   } else {
-    enterButton.attr('disabled', '')
+    enterButton.attr('disabled', 'disabled');
+    $(`<p class="warning"> *Enter a title and URL to submit a bookmark </p>`).prependTo('.web-title');
   }
 }
 webTitleInput.on('keyup', disableEnter);
@@ -61,7 +63,7 @@ webTitleInput.on('keyup', disableEnter);
 webUrlInput.on('keyup', disableEnter);
 
 
-// count for boomarks
+// count for boomarks 
  
 // count for read
 
