@@ -54,6 +54,10 @@ button {
   right: 0;
 }
 
+.required-input {
+  color: #FFFFFF;
+  text-align: center;
+}
 
 .card {
   border-style: solid;
