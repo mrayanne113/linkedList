@@ -9,14 +9,15 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
   <section class="main-left">
     <h1>Linked<img class="logo" src="images/linked-list-logo.svg" alt="Two chains over lapping.">List</h1>
     <form role="form">
       <label for="website-title"></label>
-      <input type="text" name="website-title" placeholder="Website Title" aria-required="true" class="web-title">
-      <!-- <p class="warning"> *Enter a title and URL to submit a bookmark </p> -->
+      <input type="text" name="website-title" placeholder="Website Title" aria-required="true" class="web-title" required>
+      <!-- <p class="warning required-input"> *Enter a title and URL to submit a bookmark </p> -->
       <label for="website-url"></label>
-      <input type="url" name="website-url" aria-required="true" placeholder="Website Url" class="web-url">
+      <input type="url" name="website-url" aria-required="true" placeholder="Website Url" class="web-url" required>
       <label for="enter-bttn"></label>
       <button aria-label="Enter web url and title" class="enter-button" disabled> Enter </button>
     </form>
@@ -32,6 +33,7 @@
       <button aria-label="Read this bookmark" class="read-bttn ">Read</button>
       <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
     </article>
+
   </section>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
