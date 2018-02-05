@@ -167,3 +167,9 @@ hr {
   color: #F05A28;
   font-weight: 800;
 }
+
+.warning {
+  text-align: center;
+  margin: -30px auto;
+  color: #f05a28
+}
