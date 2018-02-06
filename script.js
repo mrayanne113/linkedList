@@ -17,7 +17,6 @@ webUrlInput.on('input', disableEnter);
 
 // function for makeCard, with template lit and append
 function makeCard() {
-  // event.preventDefault();
   $('.required-input').text('');
   var webTitle = $('.web-title').val();
   var webURL = $('.web-url').val();
@@ -93,6 +92,7 @@ function allCounts() {
 // clear all read bookmarks
 
 // url valid
+
 function validateTheLink() {
   
     var linkInput = $('.web-url').val();
@@ -106,6 +106,7 @@ function validateTheLink() {
         enterButton.attr('disabled', true);
     }
 }
+
 
 
 
