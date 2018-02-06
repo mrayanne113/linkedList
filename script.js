@@ -2,19 +2,18 @@
 var enterButton = $('.enter-button');
 var webTitleInput = $('.web-title')
 var webUrlInput = $('.web-url')
-// var readBttn = $('.read-bttn');
+var readBttn = $('.read-bttn');
 var readCount = 0;
 // page load
-disableEnter()
 
 
 
 
-$enterButton.on('click', validateTheLink);
+enterButton.on('click', makeCard);
 $('web-title').on('keyup', enableBttn);
 $('.main-right').on('click', '.read-bttn', addReadClass);
 $('.main-right').on('click', '.delete-bttn', removeCard);
-$('.main-right').on('click', 'a', consoleThis)
+
 
 
 // one for enter bttn, one for read bttn, one delete, and one for read all
@@ -96,22 +95,22 @@ webUrlInput.on('keyup', disableEnter);
 // clear all read bookmarks
 
 // url valid
-function validateTheLink(e) {
-  e.preventDefault();
-    var linkInput = $('.web-url').val();
-    var linkRegex =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
-    if(linkRegex.test(linkInput) === true) {
-        $('.required-input').text('');
-        $enterButton.attr('disabled', false);
-        makeCard();
-    } else {
-        $('.required-input').text('Please enter valid URL');
-        $enterButton.attr('disabled', true);
-    }
-}
+// function validateTheLink(e) {
+//   e.preventDefault();
+//     var linkInput = $('.web-url').val();
+//     var linkRegex =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+//     if(linkRegex.test(linkInput) === true) {
+//         $('.required-input').text('');
+//         $enterButton.attr('disabled', false);
+//         makeCard();
+//     } else {
+//         $('.required-input').text('Please enter valid URL');
+//         $enterButton.attr('disabled', true);
+//     }
+// }
 
 
-function consoleThis(e){
-  e.preventDefault()
-  console.log()
-}
+// function consoleThis(e){
+//   e.preventDefault()
+//   console.log()
+// }
