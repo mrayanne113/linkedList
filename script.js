@@ -31,10 +31,17 @@ function makeCard(e) {
       <button aria-label="Read this bookmark" class="read-bttn">Read</button>
       <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
     </article>`).prependTo('.main-right');
+
+    $("a[href^='http']").each(function() {
+    $(this).css({
+    background: "url(http://www.google.com/s2/favicons?domain=" + this.hostname + ") left center no-repeat",
+    "padding-left": "20px"
+      });    
+    });
   clearInputs();
-  allCounts()
-  
+  allCounts() 
 }
+
 
 
 // enable enter bttn
@@ -56,10 +63,6 @@ function addReadClass() {
   $(this).parent('article').toggleClass('read');
   $(this).toggleClass('read-bttn-style');
   allCounts();
-   // var $anchorTag = $(this).siblings('.card-website')[0].firstChild;
-   // console.log(anchorTag)
-   // $anchorTag.toggleClass('read-underline')
-  // $('.card').closest('p').toggleClass('read-underline');
 }
 
 // // remove bttn, remove closest parent article 
