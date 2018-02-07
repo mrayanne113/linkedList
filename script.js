@@ -16,7 +16,8 @@ $('.main-right').on('click', '.delete-bttn', removeCard);
 
 
 // function for makeCard, with template lit and append
-function makeCard() {
+function makeCard(e) {
+  e.preventDefault();
   $('.required-input').text('');
   var webTitle = $('.web-title').val();
   var webURL = $('.web-url').val();

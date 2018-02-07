@@ -166,7 +166,7 @@ hr {
 
 
 .enter-button:disabled {
-  background-color: #000000;
+  background-color: #cfd8dc;
 }
 
 .warning {
@@ -228,5 +228,8 @@ hr {
   }
   .card-website {
     font-size: 17px
+  }
+  .warning {
+    margin: -18px auto;
   }
 }
