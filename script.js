@@ -3,18 +3,12 @@ var enterButton = $('.enter-button');
 var webTitleInput = $('.web-title');
 var webUrlInput = $('.web-url');
 
-
-
 enterButton.on('click', makeCard);
 webTitleInput.on('keyup', disableEnter);
 webUrlInput.on('keyup', disableEnter);
 $('.main-right').on('click', '.read-bttn', addReadClass);
 $('.main-right').on('click', '.delete-bttn', removeCard);
 $('.clear-all-bttn').on('click', removeReadCards)
-
-
-
-
 
 // function for makeCard, with template lit and append
 function makeCard(e) {
@@ -41,8 +35,6 @@ function makeCard(e) {
   clearInputs();
   allCounts() 
 }
-
-
 
 // enable enter bttn
 function enableBttn() {
@@ -82,8 +74,6 @@ function disableEnter() {
    }
 }
 
-
-
 // count for boomarks 
 // count for read
 // count for unread
@@ -96,7 +86,6 @@ function allCounts() {
 
 // clear all read bookmarks
 function removeReadCards() {
-  // if card has the class of read delete the card
   $('.read').remove();
   allCounts();
 }
@@ -113,7 +102,3 @@ function validateTheLink() {
         enterButton.attr('disabled', true);
     }
 }
-
-
-
-
