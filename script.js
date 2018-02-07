@@ -3,18 +3,12 @@ var enterButton = $('.enter-button');
 var webTitleInput = $('.web-title');
 var webUrlInput = $('.web-url');
 
-
-
 enterButton.on('click', makeCard);
 webTitleInput.on('keyup', disableEnter);
 webUrlInput.on('keyup', disableEnter);
 $('.main-right').on('click', '.read-bttn', addReadClass);
 $('.main-right').on('click', '.delete-bttn', removeCard);
 $('.clear-all-bttn').on('click', removeReadCards)
-
-
-
-
 
 // function for makeCard, with template lit and append
 function makeCard(e) {
@@ -31,11 +25,16 @@ function makeCard(e) {
       <button aria-label="Read this bookmark" class="read-bttn">Read</button>
       <button aria-label="Delete this bookmark" class="delete-bttn">Delete</button>
     </article>`).prependTo('.main-right');
-  clearInputs();
-  allCounts()
-  
-}
 
+    $("a[href^='http']").each(function() {
+    $(this).css({
+    background: "url(http://www.google.com/s2/favicons?domain=" + this.hostname + ") left center no-repeat",
+    "padding-left": "20px"
+      });    
+    });
+  clearInputs();
+  allCounts() 
+}
 
 // enable enter bttn
 function enableBttn() {
@@ -56,10 +55,6 @@ function addReadClass() {
   $(this).parent('article').toggleClass('read');
   $(this).toggleClass('read-bttn-style');
   allCounts();
-   // var $anchorTag = $(this).siblings('.card-website')[0].firstChild;
-   // console.log(anchorTag)
-   // $anchorTag.toggleClass('read-underline')
-  // $('.card').closest('p').toggleClass('read-underline');
 }
 
 // // remove bttn, remove closest parent article 
@@ -79,8 +74,6 @@ function disableEnter() {
    }
 }
 
-
-
 // count for boomarks 
 // count for read
 // count for unread
@@ -93,7 +86,6 @@ function allCounts() {
 
 // clear all read bookmarks
 function removeReadCards() {
-  // if card has the class of read delete the card
   $('.read').remove();
   allCounts();
 }
@@ -110,7 +102,3 @@ function validateTheLink() {
         enterButton.attr('disabled', true);
     }
 }
-
-
-
-
