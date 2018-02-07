@@ -172,9 +172,10 @@ hr {
 }
 
 
+
 .enter-button:disabled,
 .clear-all-bttn:disabled  {
-  background-color: #000000;
+  background-color: #CFD8DC;
 }
 
 .warning {
@@ -237,5 +238,8 @@ hr {
   }
   .card-website {
     font-size: 17px;
+  }
+  .warning {
+    margin: -18px auto;
   }
 }
