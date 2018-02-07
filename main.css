@@ -1,3 +1,4 @@
+
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -26,7 +27,7 @@ button {
   font-size: 28px;
   display: flex;
   margin: 50px auto;
-  padding-left: 10px
+  padding-left: 10px;
 }
 
 .main-left {
@@ -65,6 +66,8 @@ button {
   margin: 23px auto;
   background-color: #ffffff;
   padding: 0 30px;
+  box-sizing: border-box;
+  overflow-x: scroll;
 }
 
 .card-title {
@@ -72,6 +75,7 @@ button {
   padding-left: 10px;
   color: #455a64;
   margin-bottom: 0;
+  margin-top: 3px;
 }
 
 .card-website {
@@ -83,7 +87,8 @@ button {
   text-decoration-color: #F2F4F4;
 }
 
-.enter-button {
+.enter-button,
+.clear-all-bttn  {
   display: flex;
   width: 465px;
   margin: 0 auto;
@@ -95,16 +100,18 @@ button {
   font-weight: 800;
 }
 
-.enter-button:hover {
+.enter-button:hover,
+.clear-all-bttn:hover  {
   background-color: #ffd773;
-  transition: .5s
+  transition: .5s;
 }
 
 .bookmark-count,
 .read-count {
   text-align: center;
   color: #ffffff;
-  font-size: 21px
+  font-size: 21px;
+  margin: 4px;
 }
 
 a:link, 
@@ -165,19 +172,20 @@ hr {
 }
 
 
-.enter-button:disabled {
+.enter-button:disabled,
+.clear-all-bttn:disabled  {
   background-color: #000000;
 }
 
 .warning {
   text-align: center;
   margin: -30px auto;
-  color: #f05a28
+  color: #f05a28;
 }
 
 @media (max-width: 1445px) {
   .card {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -186,7 +194,7 @@ hr {
     flex-direction: column;
   }
   .main-right{
-    max-height: 80vh
+    max-height: 80vh;
   }
   .card {
     width: 85%;
@@ -211,7 +219,8 @@ hr {
     margin: 24px auto;
     
   }
-  .enter-button {
+  .enter-button,
+  .clear-all-bttn {
     width: 90%;
   }
   .bookmark-count,
@@ -224,9 +233,9 @@ hr {
     margin: 9px auto;
   }
   .card-title {
-    font-size: 24px
+    font-size: 24px;
   }
   .card-website {
-    font-size: 17px
+    font-size: 17px;
   }
 }
