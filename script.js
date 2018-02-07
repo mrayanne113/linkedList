@@ -10,6 +10,7 @@ webTitleInput.on('keyup', disableEnter);
 webUrlInput.on('keyup', disableEnter);
 $('.main-right').on('click', '.read-bttn', addReadClass);
 $('.main-right').on('click', '.delete-bttn', removeCard);
+$('.clear-all-bttn').on('click', removeReadCards)
 
 
 
@@ -52,9 +53,9 @@ function clearInputs() {
 
 // toggle read class
 function addReadClass() {
-  allCounts();
   $(this).parent('article').toggleClass('read');
   $(this).toggleClass('read-bttn-style');
+  allCounts();
    // var $anchorTag = $(this).siblings('.card-website')[0].firstChild;
    // console.log(anchorTag)
    // $anchorTag.toggleClass('read-underline')
@@ -91,6 +92,11 @@ function allCounts() {
 }
 
 // clear all read bookmarks
+function removeReadCards() {
+  // if card has the class of read delete the card
+  $('.read').remove();
+  allCounts();
+}
 
 // url valid
 function validateTheLink() {
