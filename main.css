@@ -67,7 +67,6 @@ button {
   background-color: #ffffff;
   padding: 0 30px;
   box-sizing: border-box;
-  overflow-x: scroll;
 }
 
 .card-title {
@@ -161,7 +160,7 @@ hr {
   background-color: #F2F4F4;
 }
 
-.read-underline {
+.read.card a {
   text-decoration: underline;
   text-decoration-color: #CFD8DC;
 }
