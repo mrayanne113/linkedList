@@ -37,4 +37,5 @@ The user should not to be able to add a URL that isn’t valid.
 
 ![the comp](http://frontend.turing.io/assets/images/projects/linked-list/linked-list-01.png)
 ![the comp](http://frontend.turing.io/assets/images/projects/linked-list/linked-list-02.png)
-![Link to our repo]( https://mrayanne113.github.io/linkedList/)
+![our comp](images/desktop.png)
+![our comp](images/Mobile.png)
