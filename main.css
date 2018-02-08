@@ -183,13 +183,13 @@ hr {
   color: #f05a28;
 }
 
-@media (max-width: 1445px) {
+@media screen and (max-width: 1445px) {
   .card {
     width: 90%;
   }
 }
 
-@media (max-width: 975px) {
+@media screen and (max-width: 975px) {
   body {
     flex-direction: column;
   }
@@ -201,7 +201,7 @@ hr {
   }
 }
 
-@media (max-width: 530px) {
+@media screen and (max-width: 530px) {
   .main-left {
     max-height: 75vh;
   }
