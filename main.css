@@ -1,4 +1,4 @@
-
+/* General */
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -12,107 +12,13 @@ body {
 h1 {
   color: #ffffff;
   font-size: 70px;
-  text-align: center;
   margin: 200px auto 0 auto;
+  text-align: center;
 }
 
 button {
   outline: none;
 }  
-
-.web-title,
-.web-url {
-  width: 450px;
-  height: 40px;
-  font-size: 28px;
-  display: flex;
-  margin: 50px auto;
-  padding-left: 10px;
-}
-
-.main-left {
-  background-color: #455a64;
-  display: flex;
-  flex: 1 0 50%;
-  flex-direction: column;
-}
-
-.logo {
-  height: 119px;
-  width: 77px;
-  margin: -30px 5px;
-}
- 
-.main-right {
-  background-color: #cfd8dc;
-  display: flex;
-  flex: 1 0 50%;
-  flex-direction: column;
-  max-height: 100vh;
-  overflow: scroll;
-}
-
-.required-input {
-  color: #FFFFFF;
-  text-align: center;
-}
-
-.card {
-  border-style: solid;
-  border-color: #607d8b;
-  /*height: 204px;*/
-  width: 584px;
-  align-items: center;
-  margin: 23px auto;
-  background-color: #ffffff;
-  padding: 0 30px;
-  box-sizing: border-box;
-}
-
-.card-title {
-  font-size: 30px;
-  padding-left: 10px;
-  color: #455a64;
-  margin-bottom: 0;
-  margin-top: 3px;
-}
-
-.card-website {
-  padding-left: 10px;
-  font-size: 20px;
-  color: #607d8b;
-  text-decoration: underline;
-  text-underline-position: under;
-  text-decoration-color: #F2F4F4;
-}
-
-.enter-button,
-.clear-all-bttn  {
-  display: flex;
-  width: 465px;
-  margin: 0 auto;
-  background-color: #ffc107;
-  border-color: #FFC107;
-  height: 40px;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.enter-button:hover,
-.clear-all-bttn:hover  {
-  background-color: #ffd773;
-  transition: .5s;
-}
-
-.bookmark-count,
-.read-count {
-  text-align: center;
-  color: #ffffff;
-  font-size: 21px;
-  margin: 4px;
-}
 
 a:link, 
 a:visited {
@@ -129,47 +35,126 @@ hr {
   background-color: #cfd8dc;
 }
 
-.read-bttn, 
-.delete-bttn {
-  color: #607D8B;
-  border: none;
-  font-size: 16px;
-  padding-top: 10px;
-  padding-bottom: 14px;
+/* Classes */
+
+.main-left {
+  background-color: #455a64;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 50%;
+}
+
+.main-right {
+  background-color: #cfd8dc;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 50%;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.web-title,
+.web-url {
+  display: flex;
+  font-size: 28px;
+  height: 40px;
+  margin: 50px auto;
+  padding-left: 10px;
+  width: 450px;
+}
+
+
+.logo {
+  height: 119px;
+  margin: -30px 5px;
+  width: 77px;
+}
+ 
+
+.required-input {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.warning {
+  color: #f05a28;
+  margin: -30px auto;
+  text-align: center;
+}
+
+.enter-button,
+.clear-all-bttn  {
+  background-color: #ffc107;
+  border-color: #FFC107;
+  color: #ffffff;
+  display: flex;
+  font-size: 20px;
+  font-weight: 800;
+  height: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 465px;
+}
+
+.bookmark-count,
+.read-count {
+  color: #ffffff;
+  font-size: 21px;
+  margin: 4px;
+  text-align: center;
+}
+
+.card {
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #607d8b;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 23px auto;
+  padding: 0 30px;
+  width: 584px;
+}
+
+.card-title {
+  color: #455a64;
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 3px;
+  padding-left: 10px;
+}
+
+.card-website {
+  color: #607d8b;
+  font-size: 20px;
+  padding-left: 10px;
+  text-decoration-color: #F2F4F4;
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-color: #F2F4F4;
+}
+
+.read-bttn, 
+.delete-bttn {
   background-color: transparent;
+  border: none;
+  color: #607D8B;
+  font-size: 16px;
+  padding-bottom: 14px;
+  padding-top: 10px;
+  text-decoration-color: #F2F4F4;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .delete-bttn {
   float: right;
 }
 
-.read-bttn:hover,
-.card-website:hover {
-  text-decoration: underline;
-  text-decoration-color: #FFC107;
-  font-weight: 800;
-}
+/* Pesudo Classes */
 
-.delete-bttn:hover {
-  text-decoration: underline;
-  text-decoration-color: #FFC107;
-}
-
-.read {
-  background-color: #F2F4F4;
-}
-
-.read.card a {
-  text-decoration: underline;
-  text-decoration-color: #CFD8DC;
-}
-
-.read.card button:first-of-type {
-  color: #F05A28;
-  font-weight: 800;
+.enter-button:hover,
+.clear-all-bttn:hover  {
+  background-color: #ffd773;
+  transition: .5s;
 }
 
 .enter-button:disabled,
@@ -178,11 +163,35 @@ hr {
   border-color: #2b353a;
 }
 
-.warning {
-  text-align: center;
-  margin: -30px auto;
-  color: #f05a28;
+.read-bttn:hover,
+.card-website:hover {
+  font-weight: 800;
+  text-decoration-color: #FFC107;
+  text-decoration: underline;
 }
+
+.delete-bttn:hover {
+  text-decoration-color: #FFC107;
+  text-decoration: underline;
+}
+
+/* Add Read Toggle Class */
+
+.read {
+  background-color: #F2F4F4;
+}
+
+.read.card a {
+  text-decoration-color: #CFD8DC;
+  text-decoration: underline;
+}
+
+.read.card button:first-of-type {
+  color: #F05A28;
+  font-weight: 800;
+}
+
+/* Media Queries */
 
 @media (max-width: 1445px) {
   .card {
@@ -194,9 +203,11 @@ hr {
   body {
     flex-direction: column;
   }
+
   .main-right{
     max-height: 80vh;
   }
+
   .card {
     width: 85%;
   }
@@ -206,39 +217,47 @@ hr {
   .main-left {
     max-height: 75vh;
   }
+
   h1 {
     font-size: 31px;
     margin: 10px auto 0 auto;
   }
+
   .logo {
     height: 82px;
     width: 39px;
   }
+
   .web-title,
   .web-url {
-    width: 90%;
     margin: 24px auto;
-    
+    width: 90%;
   }
+
   .enter-button,
   .clear-all-bttn {
     width: 90%;
   }
+
   .bookmark-count,
   .read-count {
     margin: 10px auto;
   }
+
   .card {
-    width: 78%;
     height: 175px;
     margin: 9px auto;
+    width: 78%;
   }
+
   .card-title {
     font-size: 24px;
   }
+
   .card-website {
     font-size: 17px;
   }
+  
   .warning {
     margin: -18px auto;
   }

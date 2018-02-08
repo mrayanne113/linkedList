@@ -77,8 +77,8 @@ function allCounts() {
 }
 
 function removeReadCards() {
-  $readClass.remove();
-  allCounts();
+  $('.read').remove();
+  allCounts(); 
 }
 
 function validateTheLink() {
