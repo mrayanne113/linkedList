@@ -60,7 +60,7 @@ button {
 .card {
   border-style: solid;
   border-color: #607d8b;
-  height: 204px;
+  /*height: 204px;*/
   width: 584px;
   align-items: center;
   margin: 23px auto;
@@ -92,6 +92,7 @@ button {
   width: 465px;
   margin: 0 auto;
   background-color: #ffc107;
+  border-color: #FFC107;
   height: 40px;
   justify-content: center;
   color: #ffffff;
@@ -134,6 +135,7 @@ hr {
   border: none;
   font-size: 16px;
   padding-top: 10px;
+  padding-bottom: 14px;
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-color: #F2F4F4;
@@ -165,16 +167,15 @@ hr {
   text-decoration-color: #CFD8DC;
 }
 
-.read-bttn-style {
+.read.card button:first-of-type {
   color: #F05A28;
   font-weight: 800;
 }
 
-
-
 .enter-button:disabled,
 .clear-all-bttn:disabled  {
-  background-color: #CFD8DC;
+  background-color: #2b353a;
+  border-color: #2b353a;
 }
 
 .warning {
