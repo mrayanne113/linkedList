@@ -1,4 +1,4 @@
-// variables
+
 var $webTitleInput = $('.web-title');
 var $webUrlInput = $('.web-url');
 var $enterButton = $('.enter-button');
@@ -11,7 +11,7 @@ $('.main-right').on('click', '.read-bttn', addReadClass);
 $('.main-right').on('click', '.delete-bttn', removeCard);
 $('.clear-all-bttn').on('click', removeReadCards)
 
-// function for makeCard, with template lit and append
+
 function makeCard(e) {
   e.preventDefault();
   $('.required-input').text('');
@@ -37,33 +37,28 @@ function makeCard(e) {
   allCounts() 
 }
 
-// enable enter bttn
 function enableBttn() {
   if ($enterButton.val() = '') {
     $enterButton.disabled = true;
   }
 }
 
-// clear inputs
 function clearInputs() {
   $webTitleInput.val('');
   $webUrlInput.val('');
   $webTitleInput.focus();
 }
 
-// toggle read class
 function addReadClass() {
   $(this).parent('article').toggleClass('read');
   allCounts();
 }
 
-// // remove bttn, remove closest parent article 
 function removeCard() {
   $(this).parent().remove();
   allCounts();
 }
 
-// disable enter button
 function disableEnter() {
   if ($webTitleInput.val().length > 0 && $webUrlInput.val().length > 0){
     $enterButton.removeAttr('disabled');
@@ -74,23 +69,18 @@ function disableEnter() {
    }
 }
 
-// count for boomarks 
-// count for read
-// count for unread
 function allCounts() {
-  var unreadCount =  $('.card').length - $readClass.length;
+  var unreadCount =  $('.card').length - $('.read').length;
   $('.unread-count-display').text(unreadCount);
   $('.bookmark-count-display').text($('.card').length);
-  $('.read-count-display').text($readClass.length);
+  $('.read-count-display').text($('.read').length);
 }
 
-// clear all read bookmarks
 function removeReadCards() {
-  $readClass.remove();
-  allCounts();
+  $('.read').remove();
+  allCounts(); 
 }
 
-// url valid
 function validateTheLink() {
     var linkInput = $('.web-url').val();
     var linkRegex =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;

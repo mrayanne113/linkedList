@@ -1,25 +1,26 @@
-
+/* General */
 * {
   font-family: 'Open Sans', sans-serif;
 }
 
 body { 
+  margin: 0;
   display: flex;
   margin: 0; 
   min-height: 100vh;
-  background-color: blue; 
 }
 
 h1 {
   color: #ffffff;
   font-size: 70px;
-  text-align: center;
   margin: 200px auto 0 auto;
+  text-align: center;
 }
 
 button {
   outline: none;
 }  
+
 
 hr {
   width: 98%;
@@ -46,31 +47,37 @@ a:hover {
   padding-left: 10px;
 }
 
+hr {
+  width: 98%;
+  background-color: #cfd8dc;
+}
+
+/* Classes */
+
 .main-left {
   background-color: #455a64;
   display: flex;
-  flex: 1 0 50%;
   flex-direction: column;
+  flex: 1 0 50%;
 }
 
-.logo {
-  height: 119px;
-  width: 77px;
-  margin: -30px 5px;
-}
- 
 .main-right {
   background-color: #cfd8dc;
   display: flex;
-  flex: 1 0 50%;
   flex-direction: column;
+  flex: 1 0 50%;
   max-height: 100vh;
   overflow: scroll;
 }
 
-.required-input {
-  color: #FFFFFF;
-  text-align: center;
+.web-title,
+.web-url {
+  display: flex;
+  font-size: 28px;
+  height: 40px;
+  margin: 50px auto;
+  padding-left: 10px;
+  width: 450px;
 }
 
 .card {
@@ -82,7 +89,15 @@ a:hover {
   margin: 23px auto;
   padding: 0 30px;
   width: 584px;
+ }
+
+.logo {
+  height: 119px;
+  margin: -30px 5px;
+  width: 77px;
 }
+ 
+
 
 .card-title {
   color: #455a64;
@@ -99,6 +114,17 @@ a:hover {
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
   text-underline-position: under;
+ }
+  
+.required-input {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.warning {
+  color: #f05a28;
+  margin: -30px auto;
+  text-align: center;
 }
 
 .enter-button,
@@ -127,6 +153,35 @@ a:hover {
   font-size: 21px;
   text-align: center;
   margin: 4px;
+  text-align: center;
+}
+
+.card {
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #607d8b;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 23px auto;
+  padding: 0 30px;
+  width: 584px;
+}
+
+.card-title {
+  color: #455a64;
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 3px;
+  padding-left: 10px;
+}
+
+.card-website {
+  color: #607d8b;
+  font-size: 20px;
+  padding-left: 10px;
+  text-decoration-color: #F2F4F4;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 
@@ -147,6 +202,20 @@ a:hover {
   float: right;
 }
 
+/* Pesudo Classes */
+
+.enter-button:hover,
+.clear-all-bttn:hover  {
+  background-color: #ffd773;
+  transition: .5s;
+}
+
+.enter-button:disabled,
+.clear-all-bttn:disabled  {
+  background-color: #2b353a;
+  border-color: #2b353a;
+}
+
 .read-bttn:hover,
 .card-website:hover {
   font-weight: 800;
@@ -155,23 +224,26 @@ a:hover {
 }
 
 .delete-bttn:hover {
-  text-decoration: underline;
   text-decoration-color: #FFC107;
+  text-decoration: underline;
 }
+
+/* Add Read Toggle Class */
 
 .read {
   background-color: #F2F4F4;
 }
 
 .read.card a {
-  text-decoration: underline;
   text-decoration-color: #CFD8DC;
+  text-decoration: underline;
 }
 
 .read.card button:first-of-type {
   color: #F05A28;
   font-weight: 800;
 }
+
 
 .enter-button:disabled,
 .clear-all-bttn:disabled  {
@@ -185,6 +257,9 @@ a:hover {
   text-align: center;
 }
 
+/* Media Queries */
+
+
 @media screen and (max-width: 1445px) {
   .card {
     width: 90%;
@@ -195,9 +270,11 @@ a:hover {
   body {
     flex-direction: column;
   }
+
   .main-right{
     max-height: 80vh;
   }
+
   .card {
     width: 85%;
   }
@@ -207,39 +284,47 @@ a:hover {
   .main-left {
     max-height: 75vh;
   }
+
   h1 {
     font-size: 31px;
     margin: 10px auto 0 auto;
   }
+
   .logo {
     height: 82px;
     width: 39px;
   }
+
   .web-title,
   .web-url {
     margin: 24px auto;
     width: 90%;
-    
   }
+
   .enter-button,
   .clear-all-bttn {
     width: 90%;
   }
+
   .bookmark-count,
   .read-count {
     margin: 10px auto;
   }
+
   .card {
     height: 175px;
     margin: 9px auto;
     width: 78%;
   }
+
   .card-title {
     font-size: 24px;
   }
+
   .card-website {
     font-size: 17px;
   }
+  
   .warning {
     margin: -18px auto;
   }
