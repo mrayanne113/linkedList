@@ -5,8 +5,8 @@
 
 body { 
   margin: 0;
-  background-color: red; 
   display: flex;
+  margin: 0; 
   min-height: 100vh;
 }
 
@@ -21,6 +21,12 @@ button {
   outline: none;
 }  
 
+
+hr {
+  width: 98%;
+  background-color: #cfd8dc;
+}
+
 a:link, 
 a:visited {
   color: #455A64;
@@ -29,6 +35,16 @@ a:visited {
 
 a:hover {
   text-decoration-color: #FFC107;
+}
+
+.web-title,
+.web-url {
+  width: 450px;
+  height: 40px;
+  font-size: 28px;
+  display: flex;
+  margin: 50px auto;
+  padding-left: 10px;
 }
 
 hr {
@@ -64,6 +80,16 @@ hr {
   width: 450px;
 }
 
+.card {
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #607d8b;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 23px auto;
+  padding: 0 30px;
+  width: 584px;
+ }
 
 .logo {
   height: 119px;
@@ -72,6 +98,24 @@ hr {
 }
  
 
+
+.card-title {
+  color: #455a64;
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 3px;
+  padding-left: 10px;
+}
+
+.card-website {
+  color: #607d8b;
+  font-size: 20px;
+  padding-left: 10px;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+  text-underline-position: under;
+ }
+  
 .required-input {
   color: #FFFFFF;
   text-align: center;
@@ -97,10 +141,17 @@ hr {
   width: 465px;
 }
 
+.enter-button:hover,
+.clear-all-bttn:hover  {
+  background-color: #ffd773;
+  transition: .5s;
+}
+
 .bookmark-count,
 .read-count {
   color: #ffffff;
   font-size: 21px;
+  text-align: center;
   margin: 4px;
   text-align: center;
 }
@@ -133,6 +184,7 @@ hr {
   text-underline-position: under;
 }
 
+
 .read-bttn, 
 .delete-bttn {
   background-color: transparent;
@@ -141,9 +193,9 @@ hr {
   font-size: 16px;
   padding-bottom: 14px;
   padding-top: 10px;
-  text-decoration-color: #F2F4F4;
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-color: #F2F4F4;
 }
 
 .delete-bttn {
@@ -167,8 +219,8 @@ hr {
 .read-bttn:hover,
 .card-website:hover {
   font-weight: 800;
-  text-decoration-color: #FFC107;
   text-decoration: underline;
+  text-decoration-color: #FFC107;
 }
 
 .delete-bttn:hover {
@@ -192,15 +244,29 @@ hr {
   font-weight: 800;
 }
 
+
+.enter-button:disabled,
+.clear-all-bttn:disabled  {
+  background-color: #2b353a;
+  border-color: #2b353a;
+}
+
+.warning {
+  color: #f05a28;
+  margin: -30px auto;
+  text-align: center;
+}
+
 /* Media Queries */
 
-@media (max-width: 1445px) {
+
+@media screen and (max-width: 1445px) {
   .card {
     width: 90%;
   }
 }
 
-@media (max-width: 975px) {
+@media screen and (max-width: 975px) {
   body {
     flex-direction: column;
   }
@@ -214,7 +280,7 @@ hr {
   }
 }
 
-@media (max-width: 530px) {
+@media screen and (max-width: 530px) {
   .main-left {
     max-height: 75vh;
   }
