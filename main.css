@@ -4,9 +4,10 @@
 }
 
 body { 
-  margin: 0; 
   display: flex;
+  margin: 0; 
   min-height: 100vh;
+  background-color: blue; 
 }
 
 h1 {
@@ -19,6 +20,21 @@ h1 {
 button {
   outline: none;
 }  
+
+hr {
+  width: 98%;
+  background-color: #cfd8dc;
+}
+
+a:link, 
+a:visited {
+  color: #455A64;
+  text-decoration-color: #f2F4F4;
+}
+
+a:hover {
+  text-decoration-color: #FFC107;
+}
 
 .web-title,
 .web-url {
@@ -58,46 +74,45 @@ button {
 }
 
 .card {
-  border-style: solid;
-  border-color: #607d8b;
-  /*height: 204px;*/
-  width: 584px;
   align-items: center;
-  margin: 23px auto;
   background-color: #ffffff;
-  padding: 0 30px;
+  border-color: #607d8b;
+  border-style: solid;
   box-sizing: border-box;
+  margin: 23px auto;
+  padding: 0 30px;
+  width: 584px;
 }
 
 .card-title {
-  font-size: 30px;
-  padding-left: 10px;
   color: #455a64;
+  font-size: 30px;
   margin-bottom: 0;
   margin-top: 3px;
+  padding-left: 10px;
 }
 
 .card-website {
-  padding-left: 10px;
-  font-size: 20px;
   color: #607d8b;
+  font-size: 20px;
+  padding-left: 10px;
   text-decoration: underline;
-  text-underline-position: under;
   text-decoration-color: #F2F4F4;
+  text-underline-position: under;
 }
 
 .enter-button,
 .clear-all-bttn  {
-  display: flex;
-  width: 465px;
-  margin: 0 auto;
   background-color: #ffc107;
   border-color: #FFC107;
-  height: 40px;
-  justify-content: center;
   color: #ffffff;
+  display: flex;
   font-size: 20px;
   font-weight: 800;
+  height: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 465px;
 }
 
 .enter-button:hover,
@@ -108,38 +123,24 @@ button {
 
 .bookmark-count,
 .read-count {
-  text-align: center;
   color: #ffffff;
   font-size: 21px;
+  text-align: center;
   margin: 4px;
 }
 
-a:link, 
-a:visited {
-  color: #455A64;
-  text-decoration-color: #f2F4F4;
-}
-
-a:hover {
-  text-decoration-color: #FFC107;
-}
-
-hr {
-  width: 98%;
-  background-color: #cfd8dc;
-}
 
 .read-bttn, 
 .delete-bttn {
-  color: #607D8B;
+  background-color: transparent;
   border: none;
+  color: #607D8B;
   font-size: 16px;
-  padding-top: 10px;
   padding-bottom: 14px;
+  padding-top: 10px;
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-color: #F2F4F4;
-  background-color: transparent;
 }
 
 .delete-bttn {
@@ -148,9 +149,9 @@ hr {
 
 .read-bttn:hover,
 .card-website:hover {
+  font-weight: 800;
   text-decoration: underline;
   text-decoration-color: #FFC107;
-  font-weight: 800;
 }
 
 .delete-bttn:hover {
@@ -179,9 +180,9 @@ hr {
 }
 
 .warning {
-  text-align: center;
-  margin: -30px auto;
   color: #f05a28;
+  margin: -30px auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 1445px) {
@@ -216,8 +217,8 @@ hr {
   }
   .web-title,
   .web-url {
-    width: 90%;
     margin: 24px auto;
+    width: 90%;
     
   }
   .enter-button,
@@ -229,9 +230,9 @@ hr {
     margin: 10px auto;
   }
   .card {
-    width: 78%;
     height: 175px;
     margin: 9px auto;
+    width: 78%;
   }
   .card-title {
     font-size: 24px;
